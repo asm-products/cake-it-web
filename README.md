@@ -28,8 +28,16 @@ clone the [cake-it-web repo](https://github.com/asm-products/cake-it-web)
 2. Run the "vagrant up" command.  This will take several minutes so grab a coffee.  You will have a virtual machine running on your local machine when this completes.  This will be a fully functionial development environment.
 3. Use the "vagrant ssh" to ssh into the shell of the vm.  You will be logged in as the user "vagrant".  The vagrant box shares a folder with the host OS accessible at "/vagrant".  Try running "ls -l /vagrant" from the shell of your vagrant box.  You will see the cake-it-web codebase that you cloned to your host OS.
 
-### Step 4: Run the application server
+### Step 4: Install Ruby 2.1.3 and Rails
 
 1. Change into the /vagrant directory within the vagrant shell.  "cd /vagrant"
-2. Execute the command "rails server" to start the app server.
-3. Visit localhost:4567 in your web browser.  You should see the cake-it-web application running
+2. Run `curl -sSL https://get.rvm.io | bash -s stable --ruby=2.1.3` to install RVM.
+2. Run `rvm install ruby-2.1.3` to install Ruby 2.1.3.
+3. Install Bundler with `gem install bundler`.
+4. Configure your environment using the Gemfile with `bundle install`.
+5. Sometimes Bundler might give an error saying that "an error occurred while installing pg". In that case, simply run `gem install pg` and then run step 4 again.
+
+### Step 5: Run the application server
+
+1. Execute the command "rails server" to start the app server.
+2. Visit localhost:4567 in your web browser.  You should see the cake-it-web application running
