@@ -5,3 +5,6 @@ boxes/*
 /website/docs/.vagrant
 /website/www/.vagrant
 /vagrant-spec.config.rb
+*.scssc
+tmp/cache/assets/development/sprockets/13fe41fee1fe35b49d145bcc06610705
+tmp/cache/assets/development/sprockets/2211190fb757d05874e2b25fc37a31ad
